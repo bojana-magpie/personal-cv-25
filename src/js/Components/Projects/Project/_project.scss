@@ -1,0 +1,32 @@
+@use "../../../../scss/general/variables";
+@use "../../../../scss/general/mixins";
+
+.project {
+  background: variables.$cardColor;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+  img { width: 100%}
+  .project__title {
+    font-size: 1.75em;
+    color: variables.$secondaryColor;
+  }
+  .project__description {
+    font-size: 1.125em;
+  }
+  .project__stack {
+    font-size: 0.875em;
+  }
+  .project__actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img { width: 20px; }
+    a {
+      color: variables.$whiteColor;
+      display: flex;
+      text-decoration: underline;
+      gap: 10px;
+    }
+  }
+}

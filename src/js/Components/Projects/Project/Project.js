@@ -1,0 +1,26 @@
+import React from "react";
+import "./_project.scss";
+
+import link from "../../../assets/link.svg";
+import github from "../../../assets/gith.svg";
+
+const Project = ({project}) => {
+    return (
+        <article className="article project">
+            <img src={project.img} alt="project image"/>
+            <h3 className="project__title">{project.title}</h3>
+            <p className="project__description">{project.description}</p>
+            <p className="project__stack">{project.stack}</p>
+            <div className="project__actions">
+                <a href={project.href}>
+                    <img src={link} alt="Project link"/> {project.link.title}
+                </a>
+                <a href={project.code}>
+                    <img src={github} alt="Project Code"/> {project.code.title}
+                </a>
+            </div>
+        </article>
+    )
+}
+
+export default Project;
