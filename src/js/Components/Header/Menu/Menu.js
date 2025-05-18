@@ -5,7 +5,7 @@ import menu from "../../../assets/menu.svg";
 const Menu = (props) => {
     const [mobile,setMobile] = useState(true);
     useEffect(() => {
-        if(window.innerWidth < 600) {
+        if(window.innerWidth < 800) {
             setMobile(false);
         }
     }, []);

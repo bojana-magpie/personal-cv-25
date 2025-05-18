@@ -8,10 +8,10 @@ const Banner = () => {
         <section className="section banner">
             <div className="banner__intro">
                 <h1>
-                    Hi 👋,
-                    My name is<br/>
-                    <span className="gradient">Pavan MG</span><br/>
-                    I build things for web
+                    Hi 👋, <br/>
+                    my name is<br/>
+                    <span className="gradient">Pavan MG.</span><br/>
+                    I build things for web.
                 </h1>
             </div>
             <div className="banner__image">

@@ -4,13 +4,13 @@ import Logo from "../Header/Logo/Logo";
 import Menu from "../Header/Menu/Menu";
 import Social from "../Header/Social/Social";
 
-import github from "../../assets/gith.svg";
+import github from "../../assets/github.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 const Footer = () => {
     return (
         <>
-            <footer className="header footer__top">
+            <footer className="header footer__top" id="contact">
                 <Logo/>
                 <Menu items={
                     [

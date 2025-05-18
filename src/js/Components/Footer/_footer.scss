@@ -2,6 +2,7 @@
 @use "../../../scss/general/mixins";
 
 .footer__top {
+  img { filter: grayscale(1); }
   border-bottom: 2px solid #252633;
   padding-bottom: 50px;
   .header__menu--mobile-toggle { display: none; }
@@ -9,10 +10,13 @@
     text-decoration: none;
     color: variables.$adjacentColor;
   }
-  .header__menu .header__menu--nav-list {
-    display: block;
-    position: unset;
+  @include mixins.mobile {
+    .header__menu .header__menu--nav-list {
+      display: block;
+      position: unset;
+    }
   }
+
 }
 .footer__bottom {
   display: flex;
@@ -26,3 +30,4 @@
   }
 
 }
+footer .header__menu .header__menu--nav-list  { visibility: visible!important; }

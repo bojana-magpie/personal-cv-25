@@ -19,9 +19,12 @@ section {
 .tech {
   .header__social--icons {
     justify-content: center;
+    margin-top: 100px;
+    gap: 100px;
     @include mixins.mobile { display: flex;}
     .social--icons--icon {
       width: 100px;
+
       @include  mixins.mobile { width: 50px; }
     }
   }
