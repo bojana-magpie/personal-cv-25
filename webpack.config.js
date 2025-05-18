@@ -11,19 +11,17 @@ module.exports = {
     devtool: "inline-source-map",
     output: {
         filename: "out.js",
-        path: path.resolve(__dirname, `${entryPath}/build`),
+        path: path.resolve(__dirname, "build"),
         clean: true,
     },
     devServer: {
         open: true,
         hot: false,
-        static: [
-            {
-                directory: path.join(__dirname, entryPath),
-                publicPath: "/",
-                serveIndex: true,
-            },
-        ],
+        static: {
+            directory: path.join(__dirname, entryPath),
+            publicPath: "/",
+            serveIndex: true,
+        },
         devMiddleware: {
             writeToDisk: true,
         },
@@ -41,23 +39,18 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
-                    // Compiles Sass to CSS
                     "sass-loader",
                 ],
             },
             {
                 test: /\.(jpe?g|gif|png|svg)$/,
-                loader: "file-loader",
-                options: {
-                    name: "[name].[ext]",
-                    publicPath: "/images/",
-                    outputPath: "/images/"
-                }
-            }
+                type: "asset/resource",
+                generator: {
+                    filename: "images/[name][ext]",
+                },
+            },
         ],
     },
     plugins: [
@@ -66,8 +59,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: entryPath +"/index.html",
-            inject: false
+            template: `${entryPath}/index.html`,
+            inject: true,
         }),
         new MiniCssExtractPlugin({
             filename: "css/style.css",
