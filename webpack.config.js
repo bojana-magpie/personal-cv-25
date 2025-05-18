@@ -2,9 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const entryPath = "src";
-
 module.exports = {
     mode: "development",
     entry: `./${entryPath}/js/index.js`,
@@ -17,18 +15,16 @@ module.exports = {
     devServer: {
         open: true,
         hot: false,
-        static: [
-            {
-                directory: path.join(__dirname, entryPath),
-                publicPath: "/",
-                serveIndex: true,
-            },
-        ],
+        static: {
+            directory: path.join(__dirname, entryPath),
+            publicPath: "/",
+            serveIndex: true,
+        },
         devMiddleware: {
             writeToDisk: true,
         },
         compress: true,
-        port: 3001,
+        port: 3015,
         historyApiFallback: true,
     },
     module: {
@@ -41,23 +37,18 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
-                    // Compiles Sass to CSS
                     "sass-loader",
                 ],
             },
             {
                 test: /\.(jpe?g|gif|png|svg)$/,
-                loader: "file-loader",
-                options: {
-                    name: "[name].[ext]",
-                    publicPath: "/images/",
-                    outputPath: "/images/"
-                }
-            }
+                type: "asset/resource",
+                generator: {
+                    filename: "images/[name][ext]",
+                },
+            },
         ],
     },
     plugins: [
@@ -66,8 +57,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: entryPath +"/index.html",
-            inject: false
+            template: `${entryPath}/index.html`,
+            inject: true,
         }),
         new MiniCssExtractPlugin({
             filename: "css/style.css",
