@@ -4,7 +4,7 @@ import Logo from "./Logo/Logo";
 import Menu from "./Menu/Menu";
 import Social from "./Social/Social";
 
-import github from "../../assets/github.svg";
+import github from "../../assets/gith.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 const Header = () => {

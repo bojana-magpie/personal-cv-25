@@ -4,7 +4,7 @@ import Logo from "../Header/Logo/Logo";
 import Menu from "../Header/Menu/Menu";
 import Social from "../Header/Social/Social";
 
-import github from "../../assets/github.svg";
+import github from "../../assets/gith.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 const Footer = () => {
