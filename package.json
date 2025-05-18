@@ -1,12 +1,15 @@
 {
-  "name": "personal-cv-25",
+  "name": "personal-cv-react",
+  "homepage": "https://github.com/bojana-magpie/personal-cv-25",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
-  "author": "Bojana Magpie",
+  "author": "Robi Pritrznik",
   "license": "GPL",
   "devDependencies": {
     "@babel/core": "^7.27.1",
@@ -17,6 +20,7 @@
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss-loader": "^8.1.1",

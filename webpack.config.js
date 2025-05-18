@@ -2,14 +2,16 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const entryPath = "src";
+
 module.exports = {
     mode: "development",
     entry: `./${entryPath}/js/index.js`,
     devtool: "inline-source-map",
     output: {
         filename: "out.js",
-        path: path.resolve(__dirname, `${entryPath}/build`),
+        path: path.resolve(__dirname, "build"),
         clean: true,
     },
     devServer: {
@@ -24,7 +26,7 @@ module.exports = {
             writeToDisk: true,
         },
         compress: true,
-        port: 3018,
+        port: 3001,
         historyApiFallback: true,
     },
     module: {
