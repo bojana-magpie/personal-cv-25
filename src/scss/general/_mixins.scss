@@ -5,3 +5,9 @@
     @content;
   }
 }
+
+%linear-gradient {
+  background: linear-gradient(90deg,rgba(19, 176, 245, 1) 0%, rgba(231, 15, 170, 1) 100%);;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
