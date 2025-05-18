@@ -1,0 +1,10 @@
+@use "../general/mixins";
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @include mixins.mobile {
+    width: 100%;
+    padding: 0 5px;
+  }
+}

@@ -1,4 +1,6 @@
 @use "../general/variables";
+@use "./grid";
+@use "../general/mixins";
 
 body {
   background-color: variables.$primaryColor;

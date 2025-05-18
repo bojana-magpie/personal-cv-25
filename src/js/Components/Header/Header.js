@@ -2,7 +2,8 @@ import React from "react";
 import "./_header.scss";
 import Logo from "./Logo/Logo";
 import Menu from "./Menu/Menu";
-
+import Social from "./Social/Social";
+import github from "../../assets/github.svg"
 const Header = () => {
     return (
         <header className="header">
@@ -16,6 +17,13 @@ const Header = () => {
                     { title: "Contact",  url: "#contact" },
                 ]
             }/>
+            <Social
+                items={
+                    [
+                        { url: "https://github.com/rpritr",  src: github},
+                    ]
+                }
+            />
         </header>
     )
 }

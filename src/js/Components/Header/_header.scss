@@ -1,3 +1,11 @@
+@use "../../../scss/general/mixins";
+
 .header{
   display: flex;
+  justify-content: space-between;
+  @include mixins.mobile {
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
 }
