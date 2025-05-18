@@ -2,21 +2,23 @@
 @use "../../../../scss/general/mixins";
 
 .header__menu {
-  @include mixins.mobile { height: 50px; }
   .header__menu--nav-list {
-    visibility: visible;
     display: flex;
+
     gap: 50px;
     list-style: none;
     @include mixins.mobile {
       display: flex;
-      top: 96px;
-      gap: 10px;
+      visibility: hidden;
+      top: 80px;
+      gap: 20px;
       left: 0;
-      position: absolute;
+      position: fixed;
       flex-direction: column;
-      width: 80%;
+      width: 100%;
+      background: variables.$primaryColor;
       text-align: center;
+      padding: 0;
     }
     .nav-list--item a {
       text-decoration: none;

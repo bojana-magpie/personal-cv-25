@@ -3,8 +3,11 @@
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 20px;
   @include mixins.mobile {
     width: 100%;
-    padding: 0 5px;
+  }
+  @include mixins.tablet {
+    width: 80%;
   }
 }

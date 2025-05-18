@@ -1,6 +1,5 @@
 @use "../../../scss/general/mixins";
-
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   @include mixins.mobile {

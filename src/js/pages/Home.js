@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header/Header";
 import Banner from "../Components/Banner/Banner";
 import Section from "../Components/Section/Section";
+import Footer from "../Components/Footer/Footer";
 
 const Home = () => {
     return (
@@ -14,9 +15,8 @@ const Home = () => {
             <Section class="projects" heading="Projects" subtitle="Things I've built so far">
                 <p>Tech</p>
             </Section>
-            <p>Home</p>
+            <Footer/>
         </>
-
     )
 }
 
