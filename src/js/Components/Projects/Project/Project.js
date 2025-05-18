@@ -15,7 +15,7 @@ const Project = ({project}) => {
                 <a href={project.href}>
                     <img src={link} alt="Project link"/> {project.link.title}
                 </a>
-                <a href={project.code}>
+                <a href={project.code.href}>
                     <img src={github} alt="Project Code"/> {project.code.title}
                 </a>
             </div>
