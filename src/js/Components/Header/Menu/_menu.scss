@@ -1,0 +1,12 @@
+@use "../../../../scss/general/variables";
+
+.header__menu {
+  .header__menu--nav-list {
+    display: flex;
+    gap: 50px;
+    .nav-list--item a {
+      text-decoration: none;
+      color: variables.$adjacentColor;
+    }
+  }
+}
