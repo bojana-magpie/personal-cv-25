@@ -5,8 +5,14 @@
   background: variables.$cardColor;
   border-radius: 30px;
   margin: 22px;
+  gap: 10px;
+  
+
   .project__container {
     padding: 0 30px 30px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   img { width: 100%; border-top-left-radius: 30px; border-top-right-radius: 30px; }
   .project__title {
@@ -20,10 +26,10 @@
   .project__stack {
     font-size: 0.875em;
   }
-  .project__actions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; // ← This is the key fix!
+  .project__actions a {
+    margin-top: auto;
+    justify-content: flex-start;
+    width: 100%;
     padding-top: 20px;
     img { width: 20px; }
     a {
@@ -32,5 +38,12 @@
       text-decoration: underline;
       gap: 10px;
     }
+    .project__actions {
+      margin-top: auto;      // pushes it down inside the flex container
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+    }
+
   }
 }

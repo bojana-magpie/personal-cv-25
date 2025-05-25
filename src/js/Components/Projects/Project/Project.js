@@ -13,7 +13,7 @@ const Project = ({project}) => {
                 <p className="project__description">{project.description}</p>
                 <p className="project__stack">{project.stack}</p>
                 <div className="project__actions">
-                    <a href={project.href}>
+                    <a href={project.link.href}>
                         <img src={link} alt="Project link"/> {project.link.title}
                     </a>
                     <a href={project.code.href}>

@@ -17,7 +17,7 @@ const Projects = () => {
     useEffect(() => {
         getProjects();
     }, []);
-    const project1 = {
+    const project = {
         title: "Project title",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         stack: "Tech stack: HTML , JavaScript, SASS, React",
@@ -30,7 +30,7 @@ const Projects = () => {
         <div className="projects row">
             {projects.map((project, i) => (
                 <div className="col-3" key={i}>
-                    <Project  project={project1}/>
+                    <Project  project={project}/>
                 </div>
             ))}
         </div>
