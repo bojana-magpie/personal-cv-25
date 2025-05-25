@@ -26,7 +26,7 @@ module.exports = {
             writeToDisk: true,
         },
         compress: true,
-        port: 3001,
+        port: 3004,
         historyApiFallback: true,
     },
     module: {

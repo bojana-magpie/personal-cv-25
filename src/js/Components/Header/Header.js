@@ -14,7 +14,6 @@ const Header = () => {
             <Menu items={
                 [
                     { title: "Home",  url: "#home" },
-                    { title: "About",  url: "#about" },
                     { title: "Tech Stack",  url: "#stack" },
                     { title: "Projects",  url: "#projects" },
                     { title: "Contact",  url: "#contact" },
