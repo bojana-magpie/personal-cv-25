@@ -11,8 +11,8 @@ import js from "../assets/js.svg";
 import react from "../assets/react.svg";
 import saas from "../assets/saas.svg";
 import vscode from "../assets/vscode.svg";
-import gith from "../assets/gith.svg";
 import git from "../assets/git.svg";
+import github from "../assets/github.svg"
 import Projects from "../Components/Projects/Projects";
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
                             { url: "#",  src: saas},
                             { url: "#",  src: vscode},
                             { url: "#",  src: git},
-                            { url: "#",  src: gith},
+                            { url: "#",  src: github},
 
                         ]
                     }

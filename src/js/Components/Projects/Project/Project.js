@@ -2,7 +2,7 @@ import React from "react";
 import "./_project.scss";
 
 import link from "../../../assets/link.svg";
-import github from "../../../assets/gith.svg";
+import github from "../../../assets/github.svg";
 
 const Project = ({project}) => {
     return (

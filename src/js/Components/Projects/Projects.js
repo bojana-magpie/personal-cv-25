@@ -6,6 +6,7 @@ import Project from "./Project/Project";
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
+
     const getProjects = () => {
         console.log("Getting projects");
         fetch("http://localhost:3000/projects")
@@ -16,7 +17,7 @@ const Projects = () => {
     useEffect(() => {
         getProjects();
     }, []);
-    const project = {
+    const project1 = {
         title: "Project title",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         stack: "Tech stack: HTML , JavaScript, SASS, React",
@@ -29,7 +30,7 @@ const Projects = () => {
         <div className="projects row">
             {projects.map((project, i) => (
                 <div className="col-3" key={i}>
-                    <Project  project={project}/>
+                    <Project  project={project1}/>
                 </div>
             ))}
         </div>

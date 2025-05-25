@@ -14,15 +14,15 @@ const Footer = () => {
                 <Logo/>
                 <Menu items={
                     [
-                        { title: "+91 12345 09876",  url: "tel:+91 12345 09876" },
-                        { title: "info@example.com",  url: "mailto:info@example.com" },
+                        { title: "+386 40 588 849",  url: "tel:+386 40 588 849" },
+                        { title: "bojana.magpie@gmail.com",  url: "bojana.magpie@gmail.com" },
                     ]
                 }/>
                 <Social
                     items={
                         [
-                            { url: "https://github.com/rpritr",  src: github},
-                            { url: "#",  src: linkedin},
+                            { url: "https://github.com/bojana-magpie",  src: github},
+                            { url: "https://www.linkedin.com/in/bojana-strachkovski-789958297/",  src: linkedin},
 
                         ]
                     }
@@ -31,14 +31,20 @@ const Footer = () => {
             <div className="footer__bottom">
                 <Menu items={
                     [
-                        { title: "Home",  url: "#home" },
-                        { title: "About",  url: "#about" },
+                        { title: "Home",  url: "#top" },
                         { title: "Tech Stack",  url: "#stack" },
                         { title: "Projects",  url: "#projects" },
                         { title: "Contact",  url: "#contact" },
                     ]
                 }/>
-                <p>Designed and built by <span className="gradient">Pavan MG</span> with <span className="gradient">Love</span> & <span className="gradient">Coffee</span></p>
+                <p>Built by <span style={{
+                    background: 'linear-gradient(90deg, gold 0%, deeppink 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    color: 'transparent',
+                    display: 'inline-block'
+                }}>Bojana.
+                    </span> </p>
             </div>
         </>
     )

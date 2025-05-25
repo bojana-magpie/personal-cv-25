@@ -9,26 +9,27 @@ import linkedin from "../../assets/linkedin.svg";
 
 const Header = () => {
     return (
-        <header className="header">
-            <Logo/>
-            <Menu items={
-                [
-                    { title: "Home",  url: "#home" },
-                    { title: "Tech Stack",  url: "#stack" },
-                    { title: "Projects",  url: "#projects" },
-                    { title: "Contact",  url: "#contact" },
-                ]
-            }/>
-            <Social
-                items={
-                    [
-                        { url: "https://github.com/rpritr",  src: github},
-                        { url: "#",  src: linkedin},
+        <>
+            <header className="header">
+                <div className="header__left">
+                    <Logo/>
+                </div>
+                <div className="header__right">
+                    <Menu items={[
+                        {title: "Home", url: "#top"},
+                        {title: "Tech Stack", url: "#stack"},
+                        {title: "Projects", url: "#projects"},
+                        {title: "Contact", url: "#contact"},
+                    ]}/>
+                    <Social items={[
+                        {url: "https://github.com/bojana-magpie", src: github},
+                        {url: "https://www.linkedin.com/in/bojana-strachkovski-789958297/", src: linkedin},
+                    ]}/>
+                </div>
+            </header>
 
-                    ]
-                }
-            />
-        </header>
+        </>
+
     )
 }
 

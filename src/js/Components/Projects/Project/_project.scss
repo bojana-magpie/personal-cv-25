@@ -22,8 +22,9 @@
   }
   .project__actions {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%; // ← This is the key fix!
+    padding-top: 20px;
     img { width: 20px; }
     a {
       color: variables.$whiteColor;

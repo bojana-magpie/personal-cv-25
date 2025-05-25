@@ -8,14 +8,21 @@ const Banner = () => {
         <section className="section banner">
             <div className="banner__intro">
                 <h1>
-                    Hi 👋, <br/>
-                    my name is<br/>
-                    <span className="gradient">Pavan MG.</span><br/>
+                    Hi 👋. <br/>
+                    My name is<br/>
+                    <span style={{
+                        background: 'linear-gradient(90deg, gold 0%, deeppink 100%)',
+                        WebkitBackgroundClip: 'text',
+                        backgroundClip: 'text',
+                        color: 'transparent',
+                        display: 'inline-block'
+                    }}>Bojana.
+                    </span><br/>
                     I build things for web.
                 </h1>
             </div>
             <div className="banner__image">
-                <img src={profile}  alt="profile" />
+                <img src={profile} alt="profile"/>
             </div>
         </section>
     )

@@ -12,10 +12,11 @@ body {
 }
 
 section {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.gradient { @extend %linear-gradient; }
+
+.gradient { @extend %linear-gradient;}
 
 .tech {
   .header__social--icons {
