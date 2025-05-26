@@ -15,7 +15,10 @@ const Footer = () => {
                 <Menu items={
                     [
                         { title: "+386 40 588 849",  url: "tel:+386 40 588 849" },
-                        { title: "bojana.magpie@gmail.com",  url: "bojana.magpie@gmail.com" },
+                        {
+                            title: "bojana.magpie@gmail.com",
+                            url: "mailto:bojana.magpie@gmail.com" // Remove subject/body temporarily
+                        }
                     ]
                 }/>
                 <Social

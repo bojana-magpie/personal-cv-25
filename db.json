@@ -2,61 +2,57 @@
   "projects": [
     {
       "id": 0,
-      "title": "Car sharing template",
-      "description": "HTML/CSS Desktop tempplate for car sharing",
-      "img": "https://picsum.photos/seed/picsum/400/300",
-      "stack": "HTML, CSS",
+      "title": "Space Neo template",
+      "description": "React/HTML/CSS template for Space neo",
+      "stack": "React, HTML, CSS",
       "link": {
         "href": "#",
         "title": "Live Preview"
       },
       "code": {
-        "href": "https://github.com/rpritr/carsharing-cl25",
+        "href": "https://github.com/bojana-magpie/space__neo",
         "title": "View Code"
       }
     },
     {
       "id": 1,
-      "title": "Web Shop template",
-      "description": "HTML/CSS RWD template for web shop",
-      "img": "https://picsum.photos/seed/picsum/400/300",
+      "title": "Weather App",
+      "description": "HTML/CSS/React template for weather app",
+      "stack": "HTML, CSS, React",
+      "link": {
+        "href": "#",
+        "title": "Live Preview"
+      },
+      "code": {
+        "href": "https://github.com/bojana-magpie/weather_app",
+        "title": "View Code"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Best Shop",
+      "description": "HTML/CSS/JS template",
+      "stack": "HTML, CSS, JavaScript",
+      "link": {
+        "href": "#",
+        "title": "Live Preview"
+      },
+      "code": {
+        "href": "https://github.com/bojana-magpie/best-shop-responsive",
+        "title": "View Code"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Car sharing template",
+      "description": "HTML/CSS Desktop template for car sharing",
       "stack": "HTML, CSS",
       "link": {
         "href": "#",
         "title": "Live Preview"
       },
       "code": {
-        "href": "https://github.com/rpritr/bestshop-cl25",
-        "title": "View Code"
-      }
-    },
-    {
-      "id": 3,
-      "title": "Weather App",
-      "description": "HTML/CSS/React template for weather app",
-      "img": "https://picsum.photos/seed/picsum/400/300",
-      "stack": "HTML, CSS, React",
-      "link": {
-        "href": "#",
-        "title": "Live Preview"
-      },
-      "code": {
-        "href": "https://github.com/rpritr/bestshop-cl25",
-        "title": "View Code"
-      }
-    },
-    {
-      "id": 4,
-      "title": "Personal CV",
-      "description": "HTML/CSS/React template for personal CV",
-      "img": "https://picsum.photos/seed/picsum/400/300",
-      "stack": "HTML, CSS, React",
-      "link": {
-        "href": "#",
-        "title": "Live Preview"
-      },
-      "code": {
-        "href": "https://github.com/rpritr/bestshop-cl25",
+        "href": "https://github.com/bojana-magpie/car-sharing-cl-24",
         "title": "View Code"
       }
     }
