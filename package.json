@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
-  "author": "Robi Pritrznik",
+  "author": "Bojana Magpie",
   "license": "GPL",
   "devDependencies": {
     "@babel/core": "^7.27.1",
