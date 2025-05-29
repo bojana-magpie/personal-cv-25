@@ -1,43 +1,69 @@
 import React, { useEffect, useState } from "react";
 import "./_projects.scss";
 
-// 1. Import all your local images
+// Import all images with proper handling
 import spaceNeoImg from "../../assets/space_neo.png";
 import weatherAppImg from "../../assets/weather_app.png";
 import bestShopAppImg from "../../assets/best_shop.png";
 import carSharingAppImg from "../../assets/car_sharing.png";
-import defaultImg from "../../assets/project.png"; // Fallback image
+import defaultImg from "../../assets/project.png";
 
 import Project from "./Project/Project";
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
 
-    // 2. Create mapping between project IDs and your images
-    const getLocalImage = (projectId, projectTitle) => {
-        // Match by ID first
-        switch(projectId) {
-            case 0: return spaceNeoImg;    // Use space_neo for project 0
-            case 1: return weatherAppImg;
-            case 2: return bestShopAppImg;
-            case 3: return carSharingAppImg// Use weather_app for project 3
-            default: return defaultImg;    // Fallback
-        }
-    };
+    // Debug: Log all imported images
+    useEffect(() => {
+        console.log('Imported images:', {
+            spaceNeoImg,
+            weatherAppImg,
+            bestShopAppImg,
+            carSharingAppImg,
+            defaultImg
+        });
+    }, []);
 
+    // Improved image getter with Webpack 5+ support
+    const getLocalImage = (projectId) => {
+        const imageMap = {
+            0: spaceNeoImg,
+            1: weatherAppImg,
+            2: bestShopAppImg,
+            3: carSharingAppImg
+        };
+
+        // Handle both ES modules (Webpack 5+) and direct paths
+        const image = imageMap[projectId];
+        return image?.default ? image.default : image || defaultImg;
+    };
 
     const getProjects = () => {
         fetch("http://localhost:3000/projects")
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
             .then((apiProjects) => {
-                // 3. Replace API images with your local ones
                 const projectsWithLocalImages = apiProjects.map(project => ({
-                    ...project, // Keep all API data
-                    img: getLocalImage(project.id, project.title) // Replace image
+                    ...project,
+                    img: getLocalImage(project.id)
                 }));
+                console.log('Processed projects:', projectsWithLocalImages);
                 setProjects(projectsWithLocalImages);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                console.error('Error fetching projects:', err);
+                // Fallback data if API fails
+                setProjects([
+                    {
+                        id: 0,
+                        title: "Space Neo",
+                        description: "Fallback project",
+                        img: getLocalImage(0)
+                    }
+                ]);
+            });
     };
 
     useEffect(() => {
